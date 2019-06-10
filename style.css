@@ -1,0 +1,141 @@
+body{
+    background-color: black;
+    }
+#background{
+    animation: fadeIn 7s infinite;
+}
+#moon{
+    position: absolute;
+    left: 950px;
+    top:30px;
+    animation: removeMoon 10s;
+}
+#fire{
+    position: absolute;
+    left: 950px;
+    top: 10px;
+    animation: fireFade 7s;
+}
+#cloud1{
+position: absolute;
+    animation: moveLeft ease 10s;
+    left:100px;
+    top:300px;
+}
+#cloud2{
+    position: absolute;
+    animation: moveRight ease 10s;
+    right:100px;
+    top:200px;
+}
+#spaceship{
+    position: absolute;
+    right:500px;
+    animation: moveDiagonal ease 10s;
+    animation-delay: 3s;
+}
+.fade-out{
+    animation: fadeOut ease 30s;
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+
+    }
+}
+
+.fade-in {
+    animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity:.25;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveLeft {
+    from {left: 0px;}
+    to {left: 500px;}
+}
+.moveLeft{
+    animation: moveLeft ease 5s;
+
+}
+
+@keyframes moveRight {
+    from {right: 0px;}
+    to {right: 500px;}
+}
+.moveRight{
+    animation: moveRight ease 5s;
+
+}
+
+@keyframes moveDiagonal{
+    0%{ right: 500px;
+        bottom:30px;
+    }
+
+    40%{
+        right: 100px;
+        bottom: 500px;
+    }
+    80%{
+        right: 500px;
+        bottom: 30px;
+        opacity:1;
+    }
+    90%{opacity:0;}
+    100%{opacity:0;}
+}
+.moveDiagonal{
+    animation: moveDiagonal;
+}
+@keyframes removeMoon{
+    0%{
+        opacity: 1;
+    }
+    50%{opacity:1;}
+    70%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity:0;
+    }
+}
+.removeMoon{
+    animation: removeMoon;
+}
+@keyframes fireFade{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity:0;
+    }
+    90%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.firefade{
+    animation: fireFade;
+}
